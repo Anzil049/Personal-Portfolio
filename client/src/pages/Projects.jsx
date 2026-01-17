@@ -6,7 +6,7 @@ import { Github, ExternalLink, Folder } from 'lucide-react';
 const Projects = () => {
     const projects = [
         {
-            title: "Tokyo Esports",
+            title: "Tokyo E-Commerce",
             description: "Tokyo Esports is a full-stack e-commerce platform for selling football jerseys. It features secure authentication, product management, and a responsive user interface.",
             tech: ["Node.js", "Express.js", "MongoDB", "HTML", "CSS"],
             link: "https://www.tokyosports.online",
