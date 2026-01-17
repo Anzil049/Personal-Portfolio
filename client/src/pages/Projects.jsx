@@ -45,8 +45,8 @@ const Projects = () => {
                                         <div className="d-flex justify-content-between align-items-center mb-4">
                                             <Folder size={40} className="text-accent" />
                                             <div className="d-flex gap-3">
-                                                <a href={project.github} className="text-light text-hover-accent"><Github size={20} /></a>
-                                                <a href={project.link} className="text-light text-hover-accent"><ExternalLink size={20} /></a>
+                                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-light text-hover-accent"><Github size={20} /></a>
+                                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-light text-hover-accent"><ExternalLink size={20} /></a>
                                             </div>
                                         </div>
                                         <Card.Title className="fw-bold mb-3">{project.title}</Card.Title>
