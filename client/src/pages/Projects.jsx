@@ -13,9 +13,9 @@ const Projects = () => {
             github: "https://github.com/Anzil049/TOKYO.git"
         },
         {
-            title: "Project Two",
-            description: "A dynamic web application built with React and Node.js. Features user authentication and real-time data updates.",
-            tech: ["React", "Node.js", "MongoDB", "Socket.io"],
+            title: "Personal Portfolio",
+            description: "A personal portfolio built with React and a Node.js/Express backend, featuring a contact form that stores messages in MongoDB.",
+            tech: ["React", "Node.js", "Express.js", "MongoDB"],
             link: "#",
             github: "#"
         },
