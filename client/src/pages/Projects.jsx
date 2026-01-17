@@ -16,7 +16,7 @@ const Projects = () => {
             title: "Personal Portfolio",
             description: "A personal portfolio built with React and a Node.js/Express backend, featuring a contact form that stores messages in MongoDB.",
             tech: ["React", "Node.js", "Express.js", "MongoDB"],
-            link: "#",
+            link: "https://personal-portfolio-zeta-navy.vercel.app",
             github: "https://github.com/Anzil049/Personal-Portfolio.git"
         },
         {
