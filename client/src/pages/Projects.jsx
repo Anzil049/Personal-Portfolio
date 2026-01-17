@@ -6,11 +6,11 @@ import { Github, ExternalLink, Folder } from 'lucide-react';
 const Projects = () => {
     const projects = [
         {
-            title: "Project One",
-            description: "A static portfolio website built with simple HTML and CSS. Showcases basic design principles and layout skills.",
-            tech: ["HTML", "CSS", "Design"],
-            link: "#",
-            github: "#"
+            title: "Tokyo Esports",
+            description: "Tokyo Esports is a full-stack e-commerce platform for selling football jerseys. It features secure authentication, product management, and a responsive user interface.",
+            tech: ["Node.js", "Express.js", "MongoDB", "HTML", "CSS"],
+            link: "https://www.tokyosports.online",
+            github: "https://github.com/Anzil049/TOKYO.git"
         },
         {
             title: "Project Two",

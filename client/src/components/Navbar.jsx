@@ -11,7 +11,7 @@ const CustomNavbar = () => {
             <Container>
                 <Navbar.Brand as={Link} to="/" className="d-flex align-items-center fw-bold text-accent">
                     <Code2 className="me-2" size={32} />
-                    <span style={{ fontSize: '1.5rem' }}>Portfolio</span>
+                    <span style={{ fontSize: '1.5rem' }}>ANZIL K</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
