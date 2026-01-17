@@ -17,12 +17,12 @@ const Projects = () => {
             description: "A personal portfolio built with React and a Node.js/Express backend, featuring a contact form that stores messages in MongoDB.",
             tech: ["React", "Node.js", "Express.js", "MongoDB"],
             link: "#",
-            github: "#"
+            github: "https://github.com/Anzil049/Personal-Portfolio.git"
         },
         {
-            title: "Project Three",
-            description: "An e-commerce dashboard with data visualization and reporting tools.",
-            tech: ["Vue.js", "Firebase", "Chart.js"],
+            title: "Coming soon",
+            description: "coming soon",
+            tech: ["React", "Node.js", "Express.js", "MongoDB"],
             link: "#",
             github: "#"
         }
