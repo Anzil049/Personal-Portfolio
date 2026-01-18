@@ -77,16 +77,22 @@ router.post('/', async (req, res) => {
             `
         };
 
+        // Verify Connection
+        console.log('DEBUG: Verifying SMTP Connection...');
+        await transporter.verify();
+        console.log('DEBUG: SMTP Verified. Sending Email...');
+
         // Send Email
-        console.log('DEBUG: Sending Email...');
-        await transporter.sendMail(mailOptions);
-        console.log('DEBUG: Email Sent Successfully');
+        const info = await transporter.sendMail(mailOptions);
+        console.log('DEBUG: Email Sent Successfully. Response:', info.response);
 
         res.status(201).json({ msg: 'Message sent and saved successfully', contact: savedContact });
     } catch (err) {
         console.error('DEBUG: Server Error Detected:', err.message);
-        console.error(err);
-        res.status(500).send('Server Error');
+        if (err.response) console.error('DEBUG: SMTP Response:', err.response);
+        if (err.code) console.error('DEBUG: Error Code:', err.code);
+        console.error('DEBUG: Full Error Object:', err);
+        res.status(500).json({ msg: 'Server Error', error: err.message });
     }
 });
 
