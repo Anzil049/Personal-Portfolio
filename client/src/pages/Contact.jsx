@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
