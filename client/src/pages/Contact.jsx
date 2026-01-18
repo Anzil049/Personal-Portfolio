@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -17,8 +17,24 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setStatus({ type: 'info', msg: 'Sending...' });
+
         try {
+            // Send Email via EmailJS
+            await emailjs.send(
+                'service_rf0wuu1',
+                'template_rmmwiqj',
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message
+                },
+                '_pI6KCQwxNAvSGczF'
+            );
+
+            // Save to Database (Backend)
             await axios.post(`${import.meta.env.VITE_API_URL}/api/contact`, formData);
+
             setStatus({ type: 'success', msg: 'Message sent successfully!' });
             setFormData({ name: '', email: '', message: '' });
         } catch (err) {
