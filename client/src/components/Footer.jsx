@@ -14,7 +14,7 @@ const Footer = () => {
                     <Col md={6} className="text-center text-md-end">
                         <div className="d-flex justify-content-center justify-content-md-end gap-3">
                             <a href="https://github.com/Anzil049/" target="_blank" rel="noopener noreferrer" className="text-secondary text-hover-accent"><Github size={20} /></a>
-                            <a href="https://www.linkedin.com/in/anzil-k-56024335a" target="_blank" rel="noopener noreferrer" className="text-secondary text-hover-accent"><Linkedin size={20} /></a>
+                            <a href="https://www.linkedin.com/in/anzil049" target="_blank" rel="noopener noreferrer" className="text-secondary text-hover-accent"><Linkedin size={20} /></a>
                             <a href="https://www.instagram.com/anzil__0.8/" target="_blank" rel="noopener noreferrer" className="text-secondary text-hover-accent"><Instagram size={20} /></a>
                         </div>
                     </Col>
