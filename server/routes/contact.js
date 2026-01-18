@@ -7,6 +7,7 @@ const nodemailer = require('nodemailer');
 // @desc    Submit a contact form and send email
 // @access  Public
 router.post('/', async (req, res) => {
+    console.log('DEBUG: Contact Request Received', req.body);
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
@@ -15,6 +16,7 @@ router.post('/', async (req, res) => {
 
     try {
         // Save to Database
+        console.log('DEBUG: Saving to Database...');
         const newContact = new Contact({
             name,
             email,
@@ -22,10 +24,14 @@ router.post('/', async (req, res) => {
         });
 
         const savedContact = await newContact.save();
+        console.log('DEBUG: Database Saved Successfully');
 
         // Nodemailer Configuration
+        console.log('DEBUG: Configuring Nodemailer...');
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true, // true for 465, false for other ports
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
@@ -67,11 +73,14 @@ router.post('/', async (req, res) => {
         };
 
         // Send Email
+        console.log('DEBUG: Sending Email...');
         await transporter.sendMail(mailOptions);
+        console.log('DEBUG: Email Sent Successfully');
 
         res.status(201).json({ msg: 'Message sent and saved successfully', contact: savedContact });
     } catch (err) {
-        console.error(err.message);
+        console.error('DEBUG: Server Error Detected:', err.message);
+        console.error(err);
         res.status(500).send('Server Error');
     }
 });
