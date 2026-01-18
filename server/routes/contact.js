@@ -30,11 +30,16 @@ router.post('/', async (req, res) => {
         // Nodemailer Configuration
         console.log('DEBUG: Configuring Nodemailer...');
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true, // Use SSL
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
-            }
+            },
+            family: 4, // Force IPv4 to avoid IPv6 issues
+            logger: true, // Log SMTP traffic
+            debug: true // Include debug info
         });
 
         const mailOptions = {
