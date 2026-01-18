@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+html {
+  overflow-y: scroll;
+}
 
 :root {
   --bg-primary: #0f172a; /* Slate 900 */

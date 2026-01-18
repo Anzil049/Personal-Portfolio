@@ -13,7 +13,7 @@ const About = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <h2 className="display-4 fw-bold mb-4"><span className="text-accent">01.</span> About Me</h2>
-                    <Row>
+                    <Row className="flex-column-reverse flex-lg-row align-items-center">
                         <Col lg={7}>
                             <p className="lead text-secondary">
                                 Hello! My name is Anzil and I enjoy creating things that live on the internet. I am a passionate MERN Stack Developer with a Bachelor's degree in Computer Science from the University of Calicut.
@@ -33,8 +33,8 @@ const About = () => {
                                 <li><span className="text-accent">▹</span> MongoDB</li>
                             </ul>
                         </Col>
-                        <Col lg={5} className="mt-5 mt-lg-0">
-                            <div className="position-relative">
+                        <Col lg={5} className="mb-5 mb-lg-0 d-flex justify-content-center">
+                            <div className="position-relative" style={{ width: '320px', maxWidth: '100%' }}>
                                 <div style={{
                                     border: '2px solid var(--accent)',
                                     borderRadius: '4px',
