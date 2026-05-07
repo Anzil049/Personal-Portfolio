@@ -47,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 max-w-4xl mx-auto flex flex-col items-center gap-12">
+    <section id="contact" className="pt-32 pb-24 px-6 max-w-4xl mx-auto flex flex-col items-center gap-12">
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -62,7 +62,7 @@ const Contact = () => {
         initial={{ scale: 0.95, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}
-        className="retro-container !p-8 md:!p-12 !rounded-[3rem] w-full relative"
+        className="retro-container !px-6 !py-8 md:!p-12 !rounded-[3rem] w-full relative"
       >
         <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -102,7 +102,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={isSending}
-            className={`w-full bg-retro-brown text-retro-beige py-5 rounded-2xl font-pixel text-xl hover:translate-y-[-4px] hover:shadow-retro active:translate-y-[2px] transition-all flex items-center justify-center gap-4 ${isSending ? 'opacity-70 cursor-not-allowed' : ''}`}
+            className={`w-full bg-retro-brown text-retro-beige py-4 md:py-5 rounded-2xl font-pixel text-lg md:text-xl hover:translate-y-[-4px] hover:shadow-retro active:translate-y-[2px] transition-all flex items-center justify-center gap-2 md:gap-4 ${isSending ? 'opacity-70 cursor-not-allowed' : ''}`}
           >
             {isSending ? 'TRANSMITTING...' : 'TRANSMIT MESSAGE'}
             <Send size={24} className={isSending ? 'animate-pulse' : ''} />

@@ -15,13 +15,13 @@ const Navbar = () => {
       <motion.div
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="w-full md:w-auto flex items-center justify-center gap-6 md:gap-10 bg-retro-beige/40 backdrop-blur-md border-b md:border-2 border-retro-brown/10 px-8 py-4 md:py-3 rounded-none md:rounded-full shadow-sm"
+        className="w-full md:w-auto flex items-center justify-around md:justify-center gap-3 md:gap-10 bg-retro-beige/40 backdrop-blur-md border-b md:border-2 border-retro-brown/10 px-4 md:px-8 py-4 md:py-3 rounded-none md:rounded-full shadow-sm"
       >
         {links.map((link) => (
           <a
             key={link.name}
             href={link.href}
-            className="font-pixel text-[11px] md:text-xs text-retro-brown/60 hover:text-retro-brown transition-colors tracking-widest uppercase font-bold"
+            className="font-pixel text-[10px] sm:text-[11px] md:text-xs text-retro-brown/60 hover:text-retro-brown transition-colors tracking-tighter sm:tracking-widest uppercase font-bold"
           >
             {link.name}
           </a>
